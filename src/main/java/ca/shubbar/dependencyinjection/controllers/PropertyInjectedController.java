@@ -1,6 +1,8 @@
 package ca.shubbar.dependencyinjection.controllers;
 
 import ca.shubbar.dependencyinjection.services.GreetingService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 /**
  * @author Mustafa <codingbox@outlook.com>
@@ -8,8 +10,10 @@ import ca.shubbar.dependencyinjection.services.GreetingService;
  */
 
 // Least preferred method
-
+@Controller
 public class PropertyInjectedController {
+
+    @Autowired
     public GreetingService greetingService;
 
     public String getGreeting(){
