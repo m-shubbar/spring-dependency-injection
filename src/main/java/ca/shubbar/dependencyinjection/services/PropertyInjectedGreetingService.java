@@ -6,11 +6,10 @@ import org.springframework.stereotype.Service;
  * @author Mustafa <codingbox@outlook.com>
  * Created at 2021-08-13
  */
-
 @Service
-public class GreetingServiceImpl implements GreetingService {
+public class PropertyInjectedGreetingService implements GreetingService{
     @Override
-    public String sayGreeting() {
-        return "Hello World";
+    public String sayGreeting(){
+        return "Hello World - Property";
     }
 }
